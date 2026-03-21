@@ -1,5 +1,13 @@
 {
+  "name": "voehringersolution-website",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx serve -s . -l $PORT"
+  },
   "dependencies": {
+    "serve": "^14.2.4"
+  },
+  "devDependencies": {
     "playwright": "^1.58.2"
   }
 }
