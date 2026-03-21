@@ -1,0 +1,120 @@
+============================================================
+ VOEHRINGERSOLUTIONS.DE — TESTIMONIAL VIDEO URLS
+ Extracted on 2026-03-21
+============================================================
+
+
+====== VIDEO 1: HANNES GERLACH (@hannes_gerlach) ======
+
+YouTube URL:        https://youtu.be/RLaD8tXjjVk
+YouTube Watch:      https://www.youtube.com/watch?v=RLaD8tXjjVk
+YouTube Embed:      https://www.youtube.com/embed/RLaD8tXjjVk
+YouTube Channel:    VöhringerSolutions
+Video Title:        "Hannes Gerlach über die Zusammenarbeit mit Vöhringer Solutions."
+
+Embed Code:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RLaD8tXjjVk" title="Hannes Gerlach über die Zusammenarbeit mit Vöhringer Solutions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Thumbnail URLs:
+  MaxRes:  https://img.youtube.com/vi/RLaD8tXjjVk/maxresdefault.jpg
+  HQ:      https://img.youtube.com/vi/RLaD8tXjjVk/hqdefault.jpg
+  SD:      https://img.youtube.com/vi/RLaD8tXjjVk/sddefault.jpg
+
+Preview Image (onecdn):  https://onecdn.io/media/4e71a40b-fba0-46fd-8d9c-7b42995c8a7a/preview
+
+Position on Live Site: Column 1 (left), "CRM SYSTEM" category
+Quote: "Das CRM-System hat unseren Vertrieb komplett transformiert. Frueher gingen 20% der Leads durch vergessene Follow-Ups verloren - jetzt null."
+
+Screenshots saved:
+  - assets/video-thumbnail-1.png (site preview with play button)
+  - assets/video-preview-1.png (preview image only)
+  - assets/yt-thumb-RLaD8tXjjVk.jpg (YouTube thumbnail, maxres)
+  - assets/yt-video-RLaD8tXjjVk.png (YouTube page screenshot)
+  - assets/hannes-gerlach-video-preview.png (onecdn preview, low-res blur-up)
+
+
+====== VIDEO 2: EIKE FRIEDRICH (@der.finanzstuermer) ======
+
+YouTube URL:        https://www.youtube.com/watch?v=XlcpNIQR_y8
+YouTube Embed:      https://www.youtube.com/embed/XlcpNIQR_y8
+YouTube Channel:    Nikita Sapunov (third-party interview, NOT VoehringerSolutions channel)
+Video Title:        "Hannes Gerlach: Von 0 auf 60.000 EUR/Monat mit einer KI Agentur in einem Jahr"
+
+NOTE: This video (XlcpNIQR_y8) is a third-party interview from the "Nikita Sapunov" channel
+featuring Hannes Gerlach, NOT a direct VoehringerSolutions testimonial from Eike Friedrich.
+The live website uses this video as a placeholder/generic video for the Eike Friedrich
+testimonial card. There may not be a dedicated Eike Friedrich video testimonial.
+
+Embed Code:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XlcpNIQR_y8" title="Eike Friedrich Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Thumbnail URLs:
+  MaxRes:  https://img.youtube.com/vi/XlcpNIQR_y8/maxresdefault.jpg
+  HQ:      https://img.youtube.com/vi/XlcpNIQR_y8/hqdefault.jpg
+  SD:      https://img.youtube.com/vi/XlcpNIQR_y8/sddefault.jpg
+
+Preview Image (onecdn):  https://onecdn.io/media/000adce8-a761-4bf1-b00b-673dd7e155b0/preview
+  Alt: "Ein Mann in Anzug und Brille gestikuliert vor einem Bildschirm mit dem Logo DER.FINANZSTUERMER"
+
+Position on Live Site: Column 2 (center), "WEBSEITE & FUNNEL" category
+Quote: "Professionelle Website + Funnel in 5 Tagen, perfekt integriert mit Klaviyo und Calendly. Genau das, was ich fuer meinen Kurs-Launch gebraucht habe."
+
+Screenshots saved:
+  - assets/video-thumbnail-2.png (site preview with play button)
+  - assets/video-preview-2.png (preview image only)
+  - assets/yt-thumb-XlcpNIQR_y8.jpg (YouTube thumbnail, maxres)
+  - assets/yt-video-XlcpNIQR_y8.png (YouTube page screenshot)
+  - assets/eike-friedrich-video-preview.png (onecdn preview, low-res blur-up)
+
+
+====== VIDEO 3: MARIUS HAU (@marius.growth) ======
+
+YouTube URL:        https://www.youtube.com/watch?v=XlcpNIQR_y8  (SAME as Eike Friedrich!)
+YouTube Embed:      https://www.youtube.com/embed/XlcpNIQR_y8
+
+NOTE: The Marius Hau testimonial card on the live site uses the SAME YouTube video URL
+as the Eike Friedrich card (XlcpNIQR_y8). This is the Nikita Sapunov interview video.
+There does NOT appear to be a dedicated Marius Hau video testimonial on the site.
+The preview image is different (showing a young man on a sofa), but the linked
+YouTube video is identical.
+
+Preview Image (onecdn):  https://onecdn.io/media/e9c7b7dc-a9ac-44fd-9f95-8ab4294b169e/preview
+  Alt: "Junger Mann mit dunklem Haar und dunklem Reissverschluss-Oberteil sitzt auf einem Sofa."
+
+Position on Live Site: Column 3 (right), "CRM SYSTEM" category
+Quote: "Seit VoehringerSolutions unser CRM aufgesetzt hat, sparen wir taeglich 2-3 Stunden pro Mitarbeiter. Die Investition war nach einem Monat wieder drin."
+
+Screenshots saved:
+  - assets/video-thumbnail-3.png (site preview with play button)
+  - assets/video-preview-3.png (preview image only)
+  - assets/marius-hau-video-preview.png (onecdn preview, low-res blur-up)
+
+
+====== SUMMARY ======
+
+Unique YouTube Videos Found: 2
+  1. https://youtu.be/RLaD8tXjjVk -- Hannes Gerlach testimonial (VoehringerSolutions channel)
+  2. https://www.youtube.com/watch?v=XlcpNIQR_y8 -- Hannes Gerlach interview (Nikita Sapunov channel)
+
+Video Assignments on Live Site:
+  - Hannes Gerlach card  ->  RLaD8tXjjVk (dedicated testimonial)
+  - Eike Friedrich card  ->  XlcpNIQR_y8 (reused/placeholder)
+  - Marius Hau card      ->  XlcpNIQR_y8 (reused/placeholder)
+
+VoehringerSolutions YouTube Channel: https://www.youtube.com/@VoehringerSolutions
+  (only 1 own testimonial video confirmed: RLaD8tXjjVk)
+
+Additional Screenshots:
+  - assets/live-site-full.png (full page screenshot of voehringersolutions.de)
+  - assets/live-kunden-section.png (Unsere Kunden section with marquee)
+  - assets/live-www-full.png (www version full page)
+
+
+====== SITE TECHNOLOGY ======
+
+The live site at voehringersolutions.de is built with:
+  - one.com website builder (onecdn.io CDN)
+  - React 18.2.0 (loaded via onecdn.io UMD bundles)
+  - Video embeds use data-video-url attributes on DIV elements
+  - Videos are displayed as image_button type (thumbnail + play button overlay)
+  - Clicking opens a YouTube embed overlay

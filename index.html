@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VöhringerSolutions — Vertrieb auf Autopilot</title>
+    <meta name="description" content="VöhringerSolutions automatisiert dein CRM-System. Weniger manuelle Arbeit, mehr Abschlüsse. Setup in 14 Tagen.">
+    <meta name="keywords" content="CRM Automatisierung, B2B Vertrieb, Close CRM, Sales Automation, VöhringerSolutions">
+    <meta property="og:title" content="VöhringerSolutions — Vertrieb auf Autopilot">
+    <meta property="og:description" content="Wir automatisieren dein CRM — damit dein Team verkauft, statt zu verwalten.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#" class="nav__logo">
+                <img src="assets/logo-white.png" alt="VöhringerSolutions" class="nav__logo-img">
+            </a>
+            <button class="nav__toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav__menu" id="navMenu">
+                <a href="#leistungen" class="nav__link">Leistungen</a>
+                <a href="#prozess" class="nav__link">Prozess</a>
+                <a href="#ergebnisse" class="nav__link">Ergebnisse</a>
+                <a href="#preise" class="nav__link">Preise</a>
+                <a href="#kontakt" class="nav__link">Kontakt</a>
+                <a href="#kontakt" class="nav__cta magnetic-btn">Erstgespräch buchen</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="hero__grid"></div>
+            <div class="hero__orb hero__orb--1"></div>
+            <div class="hero__orb hero__orb--2"></div>
+        </div>
+        <div class="hero__container">
+            <div class="hero__content">
+                <div class="hero__badge reveal">
+                    <span class="hero__badge-dot"></span>
+                    CRM-Automatisierung für B2B-Teams
+                </div>
+                <h1 class="hero__title">
+                    <span class="hero__title-line reveal">Vertrieb auf</span>
+                    <span class="hero__title-line hero__title-line--accent reveal">Autopilot.</span>
+                </h1>
+                <p class="hero__subtitle reveal">
+                    Wir automatisieren dein CRM — damit dein Team verkauft, statt zu verwalten.
+                    Ein Formular nach jedem Gespräch. Alles andere läuft von selbst.
+                </p>
+                <div class="hero__actions reveal">
+                    <a href="#kontakt" class="btn btn--primary magnetic-btn">
+                        <span>Erstgespräch buchen</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#leistungen" class="btn btn--ghost magnetic-btn">
+                        <span>So funktioniert's</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <!-- Stacked Display Cards (inspired by Codehagen) -->
+                <div class="display-cards">
+                    <div class="display-card display-card--1">
+                        <div class="display-card__icon display-card__icon--blue">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+                        </div>
+                        <div class="display-card__content">
+                            <span class="display-card__tag">Follow-Up</span>
+                            <span class="display-card__title">Automatisch gesendet</span>
+                            <span class="display-card__meta">Vor 2 Minuten</span>
+                        </div>
+                    </div>
+                    <div class="display-card display-card--2">
+                        <div class="display-card__icon display-card__icon--green">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <div class="display-card__content">
+                            <span class="display-card__tag">Lead Score</span>
+                            <span class="display-card__title">87 / 100 Punkte</span>
+                            <span class="display-card__meta">Automatisch berechnet</span>
+                        </div>
+                    </div>
+                    <div class="display-card display-card--3">
+                        <div class="display-card__icon display-card__icon--purple">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
+                        <div class="display-card__content">
+                            <span class="display-card__tag">Meeting</span>
+                            <span class="display-card__title">Calendly gebucht</span>
+                            <span class="display-card__meta">Morgen, 14:00 Uhr</span>
+                        </div>
+                    </div>
+                    <div class="display-card display-card--4">
+                        <div class="display-card__icon display-card__icon--orange">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <div class="display-card__content">
+                            <span class="display-card__tag">Status Update</span>
+                            <span class="display-card__title">Lead qualifiziert</span>
+                            <span class="display-card__meta">Pipeline aktualisiert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Trust Bar / Metrics -->
+    <section class="trust-bar">
+        <div class="trust-bar__container">
+            <div class="trust-bar__item reveal">
+                <span class="trust-bar__number">14</span>
+                <span class="trust-bar__label">Tage Setup</span>
+            </div>
+            <div class="trust-bar__divider"></div>
+            <div class="trust-bar__item reveal">
+                <span class="trust-bar__number">50–70%</span>
+                <span class="trust-bar__label">Zeitersparnis</span>
+            </div>
+            <div class="trust-bar__divider"></div>
+            <div class="trust-bar__item reveal">
+                <span class="trust-bar__number">0%</span>
+                <span class="trust-bar__label">Vergessene Follow-Ups</span>
+            </div>
+            <div class="trust-bar__divider"></div>
+            <div class="trust-bar__item reveal">
+                <span class="trust-bar__number">6</span>
+                <span class="trust-bar__label">Monate Mindestlaufzeit</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section section--light" id="problem">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__badge reveal">Das Problem</span>
+                <h2 class="section__title reveal">Dein Team verkauft nicht.<br>Es <span class="text-accent text-gradient">verwaltet.</span></h2>
+                <p class="section__subtitle reveal">Vertriebsteams verbringen mehr Zeit mit CRM-Pflege als mit Verkaufen. Das kostet nicht nur Zeit — es kostet Deals.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card reveal tilt-card">
+                    <div class="problem-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="problem-card__number">15–20 Min.</div>
+                    <h3 class="problem-card__title">Manuelle Arbeit pro Lead</h3>
+                    <p class="problem-card__text">Status updaten, Tasks anlegen, E-Mails schreiben — für jeden einzelnen Kontakt. Jeden Tag.</p>
+                </div>
+                <div class="problem-card reveal tilt-card">
+                    <div class="problem-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <div class="problem-card__number">20–30%</div>
+                    <h3 class="problem-card__title">Vergessene Follow-Ups</h3>
+                    <p class="problem-card__text">Leads fallen durchs Raster, weil niemand den Überblick behält. Verlorene Deals, die nie hätten verloren gehen müssen.</p>
+                </div>
+                <div class="problem-card reveal tilt-card">
+                    <div class="problem-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <div class="problem-card__number">0%</div>
+                    <h3 class="problem-card__title">Pipeline-Überblick</h3>
+                    <p class="problem-card__text">Wo steht welcher Deal? Wer muss wann angerufen werden? Keiner weiß es genau — Entscheidungen basieren auf Bauchgefühl.</p>
+                </div>
+                <div class="problem-card reveal tilt-card">
+                    <div class="problem-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                    </div>
+                    <div class="problem-card__number">Chaos</div>
+                    <h3 class="problem-card__title">Daten-Wildwuchs im CRM</h3>
+                    <p class="problem-card__text">Unvollständige Einträge, fehlende Notizen, inkonsistente Status — keine verlässliche Basis für datenbasierte Entscheidungen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section section--white" id="leistungen">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__badge reveal">Die Lösung</span>
+                <h2 class="section__title reveal">Ein System,<br>das <span class="text-accent text-gradient">mitdenkt.</span></h2>
+                <p class="section__subtitle reveal">Nach jedem Gespräch füllt dein Team ein Formular aus — alles andere übernimmt das System. Automatisch. Fehlerfrei. 24/7.</p>
+            </div>
+            <div class="solution-grid">
+                <div class="solution-card reveal tilt-card">
+                    <div class="solution-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                    </div>
+                    <h3 class="solution-card__title">Automatische Status-Updates</h3>
+                    <p class="solution-card__text">Basierend auf Gesprächsergebnissen aktualisiert sich dein CRM von selbst. Kein manuelles Umstellen, keine vergessenen Einträge.</p>
+                </div>
+                <div class="solution-card reveal tilt-card">
+                    <div class="solution-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h3 class="solution-card__title">Intelligente Follow-Ups</h3>
+                    <p class="solution-card__text">E-Mail-Sequenzen, die zum richtigen Zeitpunkt die richtige Nachricht senden. No-Show, Pre-Setting, Won — alles abgedeckt.</p>
+                </div>
+                <div class="solution-card reveal tilt-card">
+                    <div class="solution-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    </div>
+                    <h3 class="solution-card__title">Smart Task-Erstellung</h3>
+                    <p class="solution-card__text">Tasks mit intelligenter Datum/Uhrzeit-Logik werden automatisch erstellt und zugewiesen. Kein Lead wird mehr vergessen.</p>
+                </div>
+                <div class="solution-card reveal tilt-card">
+                    <div class="solution-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3 class="solution-card__title">Multi-Source Leads</h3>
+                    <p class="solution-card__text">Ads, Funnels, Scraper, Website — alle Lead-Quellen werden zentral in dein CRM eingespeist. Ein System für alles.</p>
+                </div>
+                <div class="solution-card reveal tilt-card">
+                    <div class="solution-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h3 class="solution-card__title">Calendly-Integration</h3>
+                    <p class="solution-card__text">Dynamische Buchungslinks mit vorausgefüllten Lead-Daten. Termine werden automatisch im CRM erfasst und verarbeitet.</p>
+                </div>
+                <div class="solution-card reveal tilt-card">
+                    <div class="solution-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3 class="solution-card__title">Notion Dashboard</h3>
+                    <p class="solution-card__text">Projekt-Dashboard mit Status, Dokumenten, Terminen und Zahlungen — dein kompletter Überblick auf einen Blick.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section section--dark" id="prozess">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__badge reveal">Der Prozess</span>
+                <h2 class="section__title reveal">In 14 Tagen<br><span class="text-accent text-gradient">live.</span></h2>
+                <p class="section__subtitle reveal">Klar strukturiert und auf minimalen Zeitaufwand für dein Team optimiert.<br>Dein Aufwand: ca. 3–4 Stunden.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-line"></div>
+                <div class="process-step reveal">
+                    <div class="process-step__marker">
+                        <span>01</span>
+                    </div>
+                    <div class="process-step__content tilt-card">
+                        <div class="process-step__day">Tag 1</div>
+                        <h3 class="process-step__title">Kickoff & Analyse</h3>
+                        <p class="process-step__text">60–90 Min. Kickoff-Call. Wir analysieren deinen Vertriebsprozess, klären Anforderungen, Status-Stufen, Smart Views und Integrationen.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step__marker">
+                        <span>02</span>
+                    </div>
+                    <div class="process-step__content tilt-card">
+                        <div class="process-step__day">Tag 2–8</div>
+                        <h3 class="process-step__title">Setup & Konfiguration</h3>
+                        <p class="process-step__text">Close CRM konfigurieren, Make.com Automationen bauen, E-Mail-Sequenzen einrichten, alle Integrationen herstellen.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step__marker">
+                        <span>03</span>
+                    </div>
+                    <div class="process-step__content tilt-card">
+                        <div class="process-step__day">Tag 9–11</div>
+                        <h3 class="process-step__title">Testing</h3>
+                        <p class="process-step__text">End-to-End Testing aller Workflows. Test-Leads durchlaufen das komplette System. Feinjustierung und Optimierung.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-step__marker">
+                        <span>04</span>
+                    </div>
+                    <div class="process-step__content tilt-card">
+                        <div class="process-step__day">Tag 12–14</div>
+                        <h3 class="process-step__title">Übergabe</h3>
+                        <p class="process-step__text">Übergabe-Call (60–90 Min.), individuelles Handout, Loom-Erklärvideos, Team-Training und Q&A. Dein System ist live.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section section--light" id="ergebnisse">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__badge reveal">Ergebnisse</span>
+                <h2 class="section__title reveal">Zahlen, die<br>für sich <span class="text-accent text-gradient">sprechen.</span></h2>
+                <p class="section__subtitle reveal">Unsere Systeme zahlen sich typischerweise innerhalb von 4–6 Wochen aus.</p>
+            </div>
+            <div class="results-grid">
+                <div class="result-card reveal tilt-card">
+                    <div class="result-card__before">
+                        <span class="result-card__before-label">Vorher</span>
+                        <span class="result-card__before-value">15–20 Min.</span>
+                    </div>
+                    <div class="result-card__arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="result-card__after">
+                        <span class="result-card__after-value counter" data-target="2">0</span>
+                        <span class="result-card__after-unit">–3 Min.</span>
+                    </div>
+                    <p class="result-card__label">Manuelle CRM-Arbeit pro Lead</p>
+                </div>
+                <div class="result-card reveal tilt-card">
+                    <div class="result-card__before">
+                        <span class="result-card__before-label">Vorher</span>
+                        <span class="result-card__before-value">20–30%</span>
+                    </div>
+                    <div class="result-card__arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="result-card__after">
+                        <span class="result-card__after-value counter" data-target="0">0</span>
+                        <span class="result-card__after-unit">%</span>
+                    </div>
+                    <p class="result-card__label">Vergessene Follow-Ups</p>
+                </div>
+                <div class="result-card reveal tilt-card">
+                    <div class="result-card__before">
+                        <span class="result-card__before-label">Vorher</span>
+                        <span class="result-card__before-value">Baseline</span>
+                    </div>
+                    <div class="result-card__arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="result-card__after">
+                        <span class="result-card__after-prefix">+</span>
+                        <span class="result-card__after-value counter" data-target="30">0</span>
+                        <span class="result-card__after-unit">%</span>
+                    </div>
+                    <p class="result-card__label">Höhere Closing-Rate</p>
+                </div>
+                <div class="result-card reveal tilt-card">
+                    <div class="result-card__before">
+                        <span class="result-card__before-label">Gesamt</span>
+                        <span class="result-card__before-value">Zeitersparnis</span>
+                    </div>
+                    <div class="result-card__arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="result-card__after">
+                        <span class="result-card__after-value counter" data-target="70">0</span>
+                        <span class="result-card__after-unit">%</span>
+                    </div>
+                    <p class="result-card__label">Weniger manuelle Arbeit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Showcase -->
+    <section class="section section--dark" id="dashboard-showcase">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__badge reveal">Das System</span>
+                <h2 class="section__title reveal">Dein Dashboard.<br>Alles auf einen <span class="text-accent text-gradient">Blick.</span></h2>
+                <p class="section__subtitle reveal">Pipeline-Wert, Conversion Rates, Funnel-Analyse — alle Vertriebskennzahlen in Echtzeit. Gebaut für dein Team.</p>
+            </div>
+            <div class="dashboard-showcase reveal">
+                <div class="dashboard-showcase__frame">
+                    <div class="dashboard-showcase__toolbar">
+                        <div class="dashboard-showcase__dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="dashboard-showcase__url">engine.voehringersolutions.de/client/dashboard</span>
+                    </div>
+                    <img src="assets/dashboard-pipeline.png" alt="VöhringerSolutions CRM Dashboard — Pipeline, Conversion Rates & Funnel" class="dashboard-showcase__img" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section--dark" id="kunden">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__badge reveal">Kundenstimmen</span>
+                <h2 class="section__title reveal">Das sagen<br>unsere <span class="text-accent text-gradient">Kunden.</span></h2>
+            </div>
+
+            <!-- Client Marquee -->
+            <div class="client-marquee reveal">
+                <div class="client-marquee__track">
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/hannes-gerlach.png" alt="Hannes Gerlach">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">Hannes Gerlach</span>
+                            <span class="client-chip__handle">@hannes_gerlach | 9.4K Follower</span>
+                        </div>
+                    </div>
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/marius-hau.png" alt="Marius Hau">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">Marius Hau</span>
+                            <span class="client-chip__handle">@marius.growth | 6K Follower</span>
+                        </div>
+                    </div>
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/christopher-osei.png" alt="Christopher Osei">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">Christopher Osei</span>
+                            <span class="client-chip__handle">@learn.finance_ | 85K Follower</span>
+                        </div>
+                    </div>
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/rene-zegnotat.png" alt="René Zegnotat">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">René Zegnotat</span>
+                            <span class="client-chip__handle">@finanzspicker | 40K Follower</span>
+                        </div>
+                    </div>
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/eike-friedrich.png" alt="Eike Friedrich">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">Eike Friedrich</span>
+                            <span class="client-chip__handle">@der.finanzstuermer | 47K Follower</span>
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/hannes-gerlach.png" alt="Hannes Gerlach">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">Hannes Gerlach</span>
+                            <span class="client-chip__handle">@hannes_gerlach | 9.4K Follower</span>
+                        </div>
+                    </div>
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/marius-hau.png" alt="Marius Hau">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">Marius Hau</span>
+                            <span class="client-chip__handle">@marius.growth | 6K Follower</span>
+                        </div>
+                    </div>
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/christopher-osei.png" alt="Christopher Osei">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">Christopher Osei</span>
+                            <span class="client-chip__handle">@learn.finance_ | 85K Follower</span>
+                        </div>
+                    </div>
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/rene-zegnotat.png" alt="René Zegnotat">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">René Zegnotat</span>
+                            <span class="client-chip__handle">@finanzspicker | 40K Follower</span>
+                        </div>
+                    </div>
+                    <div class="client-chip">
+                        <img class="client-chip__avatar" src="assets/eike-friedrich.png" alt="Eike Friedrich">
+                        <div class="client-chip__info">
+                            <span class="client-chip__name">Eike Friedrich</span>
+                            <span class="client-chip__handle">@der.finanzstuermer | 47K Follower</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Cards -->
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal tilt-card">
+                    <div class="testimonial-card__video" data-video="https://www.youtube.com/embed/RLaD8tXjjVk">
+                        <img src="https://img.youtube.com/vi/RLaD8tXjjVk/hqdefault.jpg" alt="Video Testimonial Hannes Gerlach" loading="lazy">
+                        <div class="testimonial-card__play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__category">CRM System</div>
+                    <blockquote class="testimonial-card__quote">
+                        &bdquo;Das CRM-System hat unseren Vertrieb komplett transformiert. Früher gingen 20% der Leads durch vergessene Follow-Ups verloren &ndash; jetzt null.&ldquo;
+                    </blockquote>
+                    <div class="testimonial-card__author">
+                        <img class="testimonial-card__avatar" src="assets/hannes-gerlach.png" alt="Hannes Gerlach">
+                        <div class="testimonial-card__info">
+                            <span class="testimonial-card__name">Hannes Gerlach</span>
+                            <span class="testimonial-card__handle">@hannes_gerlach | 9.4K Follower</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__result">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        <span>0% vergessene Follow-Ups</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal tilt-card">
+                    <div class="testimonial-card__video" data-video="https://www.youtube.com/embed/XlcpNIQR_y8">
+                        <img src="https://img.youtube.com/vi/XlcpNIQR_y8/hqdefault.jpg" alt="Video Testimonial Marius Hau" loading="lazy">
+                        <div class="testimonial-card__play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__category">CRM System</div>
+                    <blockquote class="testimonial-card__quote">
+                        &bdquo;Seit VöhringerSolutions unser CRM aufgesetzt hat, sparen wir täglich 2&ndash;3 Stunden pro Mitarbeiter. Die Investition war nach einem Monat wieder drin.&ldquo;
+                    </blockquote>
+                    <div class="testimonial-card__author">
+                        <img class="testimonial-card__avatar" src="assets/marius-hau.png" alt="Marius Hau">
+                        <div class="testimonial-card__info">
+                            <span class="testimonial-card__name">Marius Hau</span>
+                            <span class="testimonial-card__handle">@marius.growth | 6K Follower</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__result">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>2–3 Stunden/Tag gespart</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal tilt-card">
+                    <div class="testimonial-card__video" data-video="https://www.youtube.com/embed/XlcpNIQR_y8">
+                        <img src="https://img.youtube.com/vi/XlcpNIQR_y8/hqdefault.jpg" alt="Video Testimonial Eike Friedrich" loading="lazy">
+                        <div class="testimonial-card__play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__category">Webseite & Funnel</div>
+                    <blockquote class="testimonial-card__quote">
+                        &bdquo;Professionelle Website + Funnel in 5 Tagen, perfekt integriert mit Klaviyo und Calendly. Genau das, was ich für meinen Kurs-Launch gebraucht habe.&ldquo;
+                    </blockquote>
+                    <div class="testimonial-card__author">
+                        <img class="testimonial-card__avatar" src="assets/eike-friedrich.png" alt="Eike Friedrich">
+                        <div class="testimonial-card__info">
+                            <span class="testimonial-card__name">Eike Friedrich</span>
+                            <span class="testimonial-card__handle">@der.finanzstuermer | 47K Follower</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__result">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>Website + Funnel in 5 Tagen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section section--dark" id="preise">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__badge reveal">Preise</span>
+                <h2 class="section__title reveal">Transparent. Fair.<br><span class="text-accent text-gradient">Ergebnisorientiert.</span></h2>
+                <p class="section__subtitle reveal">Zwei Pakete. Klare Leistungen. Keine versteckten Kosten.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- CRM Core -->
+                <div class="pricing-card reveal tilt-card">
+                    <div class="pricing-card__header">
+                        <span class="pricing-card__badge">Für kleine Teams</span>
+                        <h3 class="pricing-card__name">CRM Core</h3>
+                        <p class="pricing-card__desc">Solo-Unternehmer und kleine Teams (1–3 Mitarbeiter), die Struktur und Zeitersparnis brauchen.</p>
+                    </div>
+                    <div class="pricing-card__pricing">
+                        <div class="pricing-card__price-row">
+                            <span class="pricing-card__price-label">Setup (einmalig)</span>
+                            <span class="pricing-card__price">€2.500 – 3.500</span>
+                        </div>
+                        <div class="pricing-card__price-row pricing-card__price-row--highlight">
+                            <span class="pricing-card__price-label">Monatlich</span>
+                            <span class="pricing-card__price">€1.000<span class="pricing-card__price-period">/Monat</span></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Close CRM komplett konfiguriert
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Smart Views & Power Dialer
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Automatische Status-Updates & Tasks
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Gmail + Calendar + Calendly
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            3–5 E-Mail-Sequenzen
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Multi-Source Lead-Anbindung
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Notion Projekt-Dashboard
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Handout + Loom-Videos
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Unbegrenzter WhatsApp-Support
+                        </li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn--outline magnetic-btn pricing-card__btn">
+                        <span>Jetzt starten</span>
+                    </a>
+                </div>
+
+                <!-- CRM Complete -->
+                <div class="pricing-card pricing-card--featured reveal tilt-card">
+                    <div class="pricing-card__popular">Beliebteste Wahl</div>
+                    <div class="pricing-card__header">
+                        <span class="pricing-card__badge">Für wachsende Teams</span>
+                        <h3 class="pricing-card__name">CRM Complete</h3>
+                        <p class="pricing-card__desc">Wachsende Teams (3–10 Mitarbeiter) mit höherem Lead-Volumen, die maximale Automation wollen.</p>
+                    </div>
+                    <div class="pricing-card__pricing">
+                        <div class="pricing-card__price-row">
+                            <span class="pricing-card__price-label">Setup (einmalig)</span>
+                            <span class="pricing-card__price">€4.500 – 5.500</span>
+                        </div>
+                        <div class="pricing-card__price-row pricing-card__price-row--highlight">
+                            <span class="pricing-card__price-label">Monatlich</span>
+                            <span class="pricing-card__price">€1.500<span class="pricing-card__price-period">/Monat</span></span>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Alles aus CRM Core, plus:
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            8+ erweiterte E-Mail-Sequenzen
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            SMS/WhatsApp Termin-Reminder
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Lead Scoring System (0–100)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Deal-Rotation im Team
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Dynamische Calendly-Links
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Onboarding-Automationen
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Sales Performance Dashboard
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Slack/Teams-Integration
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Monatlicher Strategy-Call
+                        </li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn--primary magnetic-btn pricing-card__btn">
+                        <span>Jetzt starten</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="section section--light" id="techstack">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__badge reveal">Tech-Stack</span>
+                <h2 class="section__title reveal">Deine Tools.<br>Deine <span class="text-accent text-gradient">Kontrolle.</span></h2>
+                <p class="section__subtitle reveal">Alle Tools werden individuell auf deinen Prozess konfiguriert. Du behältst die volle Kontrolle — kein Vendor-Lock-in.</p>
+            </div>
+            <div class="tech-marquee">
+                <div class="tech-marquee__track">
+                    <div class="tech-item link-preview-trigger" data-preview="CRM-System für Vertriebsteams mit Power Dialer, Smart Views und Automationen."><img src="assets/logos/close-crm.png" alt="Close CRM" class="tech-item__logo">Close CRM</div>
+                    <div class="tech-item link-preview-trigger" data-preview="No-Code Automationsplattform — verbindet alle Tools miteinander."><img src="assets/logos/make.png" alt="Make" class="tech-item__logo">Make.com</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Kunden-Dashboard mit Status, Dokumenten, Terminen und Zahlungen."><img src="assets/logos/notion.png" alt="Notion" class="tech-item__logo">Notion</div>
+                    <div class="tech-item link-preview-trigger" data-preview="E-Mail-Integration für automatische Follow-Up-Sequenzen."><img src="assets/logos/gmail.png" alt="Gmail" class="tech-item__logo">Gmail</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Terminbuchung mit dynamischen Links und vorausgefüllten Lead-Daten."><img src="assets/logos/calendly.png" alt="Calendly" class="tech-item__logo">Calendly</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Daten & Reporting für Vertriebskennzahlen und Performance-Tracking."><img src="assets/logos/google-sheets.png" alt="Google Sheets" class="tech-item__logo">Google Sheets</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Zahlungsabwicklung für automatisierte Rechnungen und Onboarding."><img src="assets/logos/stripe.png" alt="Stripe" class="tech-item__logo">Stripe</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Echtzeit-Benachrichtigungen bei neuen Deals, Terminen und Status-Updates."><img src="assets/logos/slack.png" alt="Slack" class="tech-item__logo">Slack</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Sales Performance Dashboard mit Vertriebskennzahlen in Echtzeit."><img src="assets/logos/looker-studio.png" alt="Looker Studio" class="tech-item__logo">Looker Studio</div>
+                    <div class="tech-item link-preview-trigger" data-preview="E-Mail-Marketing mit automatisierten Nurture- und Recovery-Sequenzen."><img src="assets/logos/klaviyo.png" alt="Klaviyo" class="tech-item__logo">Klaviyo</div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="tech-item link-preview-trigger" data-preview="CRM-System für Vertriebsteams mit Power Dialer, Smart Views und Automationen."><img src="assets/logos/close-crm.png" alt="Close CRM" class="tech-item__logo">Close CRM</div>
+                    <div class="tech-item link-preview-trigger" data-preview="No-Code Automationsplattform — verbindet alle Tools miteinander."><img src="assets/logos/make.png" alt="Make" class="tech-item__logo">Make.com</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Kunden-Dashboard mit Status, Dokumenten, Terminen und Zahlungen."><img src="assets/logos/notion.png" alt="Notion" class="tech-item__logo">Notion</div>
+                    <div class="tech-item link-preview-trigger" data-preview="E-Mail-Integration für automatische Follow-Up-Sequenzen."><img src="assets/logos/gmail.png" alt="Gmail" class="tech-item__logo">Gmail</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Terminbuchung mit dynamischen Links und vorausgefüllten Lead-Daten."><img src="assets/logos/calendly.png" alt="Calendly" class="tech-item__logo">Calendly</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Daten & Reporting für Vertriebskennzahlen und Performance-Tracking."><img src="assets/logos/google-sheets.png" alt="Google Sheets" class="tech-item__logo">Google Sheets</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Zahlungsabwicklung für automatisierte Rechnungen und Onboarding."><img src="assets/logos/stripe.png" alt="Stripe" class="tech-item__logo">Stripe</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Echtzeit-Benachrichtigungen bei neuen Deals, Terminen und Status-Updates."><img src="assets/logos/slack.png" alt="Slack" class="tech-item__logo">Slack</div>
+                    <div class="tech-item link-preview-trigger" data-preview="Sales Performance Dashboard mit Vertriebskennzahlen in Echtzeit."><img src="assets/logos/looker-studio.png" alt="Looker Studio" class="tech-item__logo">Looker Studio</div>
+                    <div class="tech-item link-preview-trigger" data-preview="E-Mail-Marketing mit automatisierten Nurture- und Recovery-Sequenzen."><img src="assets/logos/klaviyo.png" alt="Klaviyo" class="tech-item__logo">Klaviyo</div>
+                </div>
+            </div>
+            <!-- Link Preview Popup -->
+            <div class="link-preview-popup" id="linkPreviewPopup">
+                <p class="link-preview-popup__text"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section--white" id="faq">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__badge reveal">FAQ</span>
+                <h2 class="section__title reveal">Häufige<br><span class="text-accent text-gradient">Fragen.</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        <span>Wie lange dauert das Setup?</span>
+                        <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Das komplette Setup dauert 7–14 Tage. Dein zeitlicher Aufwand beträgt dabei nur ca. 3–4 Stunden (Kickoff-Call + Übergabe + kurze Abstimmungen). Den Rest erledigen wir.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        <span>Welches CRM wird verwendet?</span>
+                        <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Wir arbeiten mit Close CRM — eines der leistungsstärksten CRM-Systeme für Vertriebsteams. Die Lizenz (€109/User/Monat) wird direkt vom Kunden bezogen. Du behältst die volle Kontrolle über deinen Account.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        <span>Behalte ich die Kontrolle über meine Tools?</span>
+                        <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Ja, zu 100%. Alle Tools laufen auf deinen eigenen Accounts. Es gibt kein Vendor-Lock-in. Solltest du die Zusammenarbeit beenden, behältst du das komplette System.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        <span>Was passiert nach der Mindestlaufzeit?</span>
+                        <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Nach den 6 Monaten Mindestlaufzeit wird der Vertrag monatlich kündbar. Die meisten Kunden bleiben, weil der laufende Support und die kontinuierlichen Optimierungen das System stetig besser machen.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        <span>Kann ich von Core auf Complete upgraden?</span>
+                        <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Ja, jederzeit. Wenn dein Team wächst oder du erweiterte Funktionen wie Lead Scoring, Deal-Rotation oder SMS-Reminder brauchst, upgraden wir nahtlos auf CRM Complete.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        <span>Welche zusätzlichen Kosten kommen auf mich zu?</span>
+                        <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Neben unseren Gebühren zahlst du die Close CRM Lizenz (€109/User/Monat) und bei CRM Complete optional SMS-Kosten (ca. €30–50/Monat). Tools wie Notion und Stripe sind in der Regel kostenlos nutzbar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" id="kontakt">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2 class="cta-content__title">Bereit für<br><span class="text-accent text-gradient">automatisierten</span> Vertrieb?</h2>
+                <p class="cta-content__text">30 Minuten. Kostenlos. Unverbindlich.<br>Wir analysieren deinen Vertriebsprozess und zeigen dir, wie viel Zeit und Geld du sparen kannst.</p>
+                <a href="mailto:account@voehringersolution.de" class="btn btn--primary btn--large magnetic-btn">
+                    <span>Erstgespräch buchen</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <div class="cta-content__contact">
+                    <div class="cta-contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <a href="mailto:account@voehringersolution.de">account@voehringersolution.de</a>
+                    </div>
+                    <div class="cta-contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Wittenberger Weg 6, 68309 Mannheim</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="assets/logo-white.png" alt="VöhringerSolutions" class="footer__logo">
+                    <p class="footer__tagline">CRM-Automatisierung für B2B-Vertriebsteams.</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__col">
+                        <h4 class="footer__col-title">Navigation</h4>
+                        <a href="#leistungen" class="footer__link">Leistungen</a>
+                        <a href="#prozess" class="footer__link">Prozess</a>
+                        <a href="#ergebnisse" class="footer__link">Ergebnisse</a>
+                        <a href="#preise" class="footer__link">Preise</a>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__col-title">Kontakt</h4>
+                        <a href="mailto:account@voehringersolution.de" class="footer__link">E-Mail</a>
+                        <a href="https://de.linkedin.com/in/max-v%C3%B6hringer-2585a039b" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+                        <a href="https://instagram.com/_maxv9" target="_blank" rel="noopener" class="footer__link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026 VöhringerSolutions. Alle Rechte vorbehalten.</p>
+                <div class="footer__social">
+                    <a href="https://de.linkedin.com/in/max-v%C3%B6hringer-2585a039b" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/_maxv9" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <button class="video-modal__close" id="videoModalClose">&times;</button>
+        <iframe id="videoModalIframe" allowfullscreen></iframe>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

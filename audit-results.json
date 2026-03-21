@@ -1,0 +1,865 @@
+{
+  "sections": [
+    {
+      "id": "hero",
+      "bg": "rgba(0, 0, 0, 0)",
+      "paddingTop": "80px",
+      "paddingBottom": "0px",
+      "height": "900px"
+    },
+    {
+      "id": "trust-bar",
+      "bg": "rgb(250, 250, 248)",
+      "paddingTop": "48px",
+      "paddingBottom": "48px",
+      "height": "174.78125px"
+    },
+    {
+      "id": "problem",
+      "bg": "rgb(250, 250, 248)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "1441.609375px"
+    },
+    {
+      "id": "leistungen",
+      "bg": "rgb(255, 255, 255)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "1383.890625px"
+    },
+    {
+      "id": "prozess",
+      "bg": "rgb(17, 17, 17)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "1670.890625px"
+    },
+    {
+      "id": "ergebnisse",
+      "bg": "rgb(250, 250, 248)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "1203.328125px"
+    },
+    {
+      "id": "dashboard-showcase",
+      "bg": "rgb(17, 17, 17)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "844.15625px"
+    },
+    {
+      "id": "kunden",
+      "bg": "rgb(17, 17, 17)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "1361.46875px"
+    },
+    {
+      "id": "preise",
+      "bg": "rgb(17, 17, 17)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "1584.09375px"
+    },
+    {
+      "id": "techstack",
+      "bg": "rgba(0, 0, 0, 0)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "878.984375px"
+    },
+    {
+      "id": "faq",
+      "bg": "rgb(17, 17, 17)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "1135.921875px"
+    },
+    {
+      "id": "kontakt",
+      "bg": "rgba(0, 0, 0, 0)",
+      "paddingTop": "200px",
+      "paddingBottom": "200px",
+      "height": "789.734375px"
+    },
+    {
+      "id": "footer",
+      "bg": "rgb(17, 17, 17)",
+      "paddingTop": "60px",
+      "paddingBottom": "30px",
+      "height": "352.75px"
+    }
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Vertrieb auf\n                    Autopilot.",
+      "fontSize": "88px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "83.6px",
+      "letterSpacing": "-3.52px",
+      "marginBottom": "28px"
+    },
+    {
+      "tag": "H2",
+      "text": "Dein Team verkauft nicht.Es verwaltet.",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    },
+    {
+      "tag": "H3",
+      "text": "Manuelle Arbeit pro Lead",
+      "fontSize": "18.4px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "29.44px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H3",
+      "text": "Vergessene Follow-Ups",
+      "fontSize": "18.4px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "29.44px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H3",
+      "text": "Pipeline-Überblick",
+      "fontSize": "18.4px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "29.44px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H3",
+      "text": "Daten-Wildwuchs im CRM",
+      "fontSize": "18.4px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "29.44px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H2",
+      "text": "Ein System,das mitdenkt.",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    },
+    {
+      "tag": "H3",
+      "text": "Automatische Status-Updates",
+      "fontSize": "17.6px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "28.16px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H3",
+      "text": "Intelligente Follow-Ups",
+      "fontSize": "17.6px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "28.16px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H3",
+      "text": "Smart Task-Erstellung",
+      "fontSize": "17.6px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "28.16px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H3",
+      "text": "Multi-Source Leads",
+      "fontSize": "17.6px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "28.16px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H3",
+      "text": "Calendly-Integration",
+      "fontSize": "17.6px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "28.16px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H3",
+      "text": "Notion Dashboard",
+      "fontSize": "17.6px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "28.16px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H2",
+      "text": "In 14 Tagenlive.",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    },
+    {
+      "tag": "H3",
+      "text": "Kickoff & Analyse",
+      "fontSize": "19.2px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "30.72px",
+      "letterSpacing": "normal",
+      "marginBottom": "8px"
+    },
+    {
+      "tag": "H3",
+      "text": "Setup & Konfiguration",
+      "fontSize": "19.2px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "30.72px",
+      "letterSpacing": "normal",
+      "marginBottom": "8px"
+    },
+    {
+      "tag": "H3",
+      "text": "Testing",
+      "fontSize": "19.2px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "30.72px",
+      "letterSpacing": "normal",
+      "marginBottom": "8px"
+    },
+    {
+      "tag": "H3",
+      "text": "Übergabe",
+      "fontSize": "19.2px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "30.72px",
+      "letterSpacing": "normal",
+      "marginBottom": "8px"
+    },
+    {
+      "tag": "H2",
+      "text": "Zahlen, diefür sich sprechen.",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(17, 17, 17)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    },
+    {
+      "tag": "H2",
+      "text": "Dein Dashboard.Alles auf einen Blick.",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    },
+    {
+      "tag": "H2",
+      "text": "Das sagenunsere Kunden.",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    },
+    {
+      "tag": "H2",
+      "text": "Transparent. Fair.Ergebnisorientiert.",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    },
+    {
+      "tag": "H3",
+      "text": "CRM Core",
+      "fontSize": "25.6px",
+      "fontWeight": "700",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "40.96px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H3",
+      "text": "CRM Complete",
+      "fontSize": "25.6px",
+      "fontWeight": "700",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "40.96px",
+      "letterSpacing": "normal",
+      "marginBottom": "10px"
+    },
+    {
+      "tag": "H2",
+      "text": "Deine Tools.Deine Kontrolle.",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    },
+    {
+      "tag": "H2",
+      "text": "HäufigeFragen.",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    },
+    {
+      "tag": "H2",
+      "text": "Bereit fürautomatisierten Vertrieb?",
+      "fontSize": "72px",
+      "fontWeight": "600",
+      "fontFamily": "Space Grotesk",
+      "color": "rgb(255, 255, 255)",
+      "lineHeight": "72px",
+      "letterSpacing": "-2.16px",
+      "marginBottom": "24px"
+    }
+  ],
+  "cards": [
+    {
+      "class": "display-card",
+      "padding": "20px 22px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(255, 255, 255, 0.1)",
+      "background": "rgb(22, 22, 22)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "display-card",
+      "padding": "20px 22px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(255, 255, 255, 0.1)",
+      "background": "rgb(22, 22, 22)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "display-card",
+      "padding": "20px 22px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(255, 255, 255, 0.1)",
+      "background": "rgb(22, 22, 22)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "display-card",
+      "padding": "20px 22px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(255, 255, 255, 0.1)",
+      "background": "rgb(22, 22, 22)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "problem-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "problem-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "problem-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "problem-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "solution-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "solution-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "solution-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "solution-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "solution-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "solution-card",
+      "padding": "40px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "process-step__content",
+      "padding": "28px 32px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(255, 255, 255, 0.06)",
+      "background": "rgb(22, 22, 22)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "process-step__content",
+      "padding": "28px 32px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(255, 255, 255, 0.06)",
+      "background": "rgb(22, 22, 22)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "process-step__content",
+      "padding": "28px 32px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(255, 255, 255, 0.06)",
+      "background": "rgb(22, 22, 22)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "process-step__content",
+      "padding": "28px 32px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(255, 255, 255, 0.06)",
+      "background": "rgb(22, 22, 22)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "result-card",
+      "padding": "36px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    {
+      "class": "result-card",
+      "padding": "36px",
+      "borderRadius": "22px",
+      "border": "1px solid rgba(0, 0, 0, 0.07)",
+      "background": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Erstgespräch buchen",
+      "padding": "10px 22px",
+      "borderRadius": "9999px",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(12, 12, 12)",
+      "fontSize": "13.6px",
+      "fontWeight": "600"
+    },
+    {
+      "text": "Erstgespräch buchen",
+      "padding": "14px 28px",
+      "borderRadius": "9999px",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(12, 12, 12)",
+      "fontSize": "15.2px",
+      "fontWeight": "600"
+    },
+    {
+      "text": "So funktioniert's",
+      "padding": "14px 28px",
+      "borderRadius": "9999px",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(229, 229, 229)",
+      "fontSize": "15.2px",
+      "fontWeight": "600"
+    },
+    {
+      "text": "Jetzt starten",
+      "padding": "14px 28px",
+      "borderRadius": "9999px",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(229, 229, 229)",
+      "fontSize": "15.2px",
+      "fontWeight": "600"
+    },
+    {
+      "text": "Jetzt starten",
+      "padding": "14px 28px",
+      "borderRadius": "9999px",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(12, 12, 12)",
+      "fontSize": "15.2px",
+      "fontWeight": "600"
+    },
+    {
+      "text": "Erstgespräch buchen",
+      "padding": "18px 36px",
+      "borderRadius": "9999px",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(12, 12, 12)",
+      "fontSize": "16.8px",
+      "fontWeight": "600"
+    }
+  ],
+  "paragraphs": [
+    {
+      "text": "Wir automatisieren dein CRM — damit dein",
+      "fontSize": "16.8px",
+      "color": "rgb(136, 136, 136)",
+      "lineHeight": "30.24px"
+    },
+    {
+      "text": "Vertriebsteams verbringen mehr Zeit mit ",
+      "fontSize": "17.6px",
+      "color": "rgb(90, 90, 90)",
+      "lineHeight": "31.68px"
+    },
+    {
+      "text": "Status updaten, Tasks anlegen, E-Mails s",
+      "fontSize": "14.4px",
+      "color": "rgb(90, 90, 90)",
+      "lineHeight": "23.04px"
+    },
+    {
+      "text": "Leads fallen durchs Raster, weil niemand",
+      "fontSize": "14.4px",
+      "color": "rgb(90, 90, 90)",
+      "lineHeight": "23.04px"
+    },
+    {
+      "text": "Wo steht welcher Deal? Wer muss wann ang",
+      "fontSize": "14.4px",
+      "color": "rgb(90, 90, 90)",
+      "lineHeight": "23.04px"
+    },
+    {
+      "text": "Unvollständige Einträge, fehlende Notize",
+      "fontSize": "14.4px",
+      "color": "rgb(90, 90, 90)",
+      "lineHeight": "23.04px"
+    },
+    {
+      "text": "Nach jedem Gespräch füllt dein Team ein ",
+      "fontSize": "17.6px",
+      "color": "rgb(90, 90, 90)",
+      "lineHeight": "31.68px"
+    },
+    {
+      "text": "Basierend auf Gesprächsergebnissen aktua",
+      "fontSize": "14.4px",
+      "color": "rgb(90, 90, 90)",
+      "lineHeight": "23.04px"
+    },
+    {
+      "text": "E-Mail-Sequenzen, die zum richtigen Zeit",
+      "fontSize": "14.4px",
+      "color": "rgb(90, 90, 90)",
+      "lineHeight": "23.04px"
+    },
+    {
+      "text": "Tasks mit intelligenter Datum/Uhrzeit-Lo",
+      "fontSize": "14.4px",
+      "color": "rgb(90, 90, 90)",
+      "lineHeight": "23.04px"
+    }
+  ],
+  "sectionGaps": [
+    {
+      "between": "hero → 1",
+      "gap": "0px"
+    },
+    {
+      "between": "1 → problem",
+      "gap": "0px"
+    },
+    {
+      "between": "problem → leistungen",
+      "gap": "0px"
+    },
+    {
+      "between": "leistungen → prozess",
+      "gap": "0px"
+    },
+    {
+      "between": "prozess → ergebnisse",
+      "gap": "0px"
+    },
+    {
+      "between": "ergebnisse → dashboard-showcase",
+      "gap": "0px"
+    },
+    {
+      "between": "dashboard-showcase → kunden",
+      "gap": "0px"
+    },
+    {
+      "between": "kunden → preise",
+      "gap": "0px"
+    },
+    {
+      "between": "preise → techstack",
+      "gap": "0px"
+    },
+    {
+      "between": "techstack → faq",
+      "gap": "0px"
+    },
+    {
+      "between": "faq → kontakt",
+      "gap": "0px"
+    }
+  ],
+  "badges": [
+    {
+      "text": "Das Problem",
+      "fontSize": "11.2px",
+      "padding": "6px 16px",
+      "color": "rgb(90, 90, 90)",
+      "borderColor": "rgba(0, 0, 0, 0.07)",
+      "letterSpacing": "1.344px"
+    },
+    {
+      "text": "Die Lösung",
+      "fontSize": "11.2px",
+      "padding": "6px 16px",
+      "color": "rgb(90, 90, 90)",
+      "borderColor": "rgba(0, 0, 0, 0.07)",
+      "letterSpacing": "1.344px"
+    },
+    {
+      "text": "Der Prozess",
+      "fontSize": "11.2px",
+      "padding": "6px 16px",
+      "color": "rgb(136, 136, 136)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "letterSpacing": "1.344px"
+    },
+    {
+      "text": "Ergebnisse",
+      "fontSize": "11.2px",
+      "padding": "6px 16px",
+      "color": "rgb(90, 90, 90)",
+      "borderColor": "rgba(0, 0, 0, 0.07)",
+      "letterSpacing": "1.344px"
+    },
+    {
+      "text": "Das System",
+      "fontSize": "11.2px",
+      "padding": "6px 16px",
+      "color": "rgb(136, 136, 136)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "letterSpacing": "1.344px"
+    },
+    {
+      "text": "Kundenstimmen",
+      "fontSize": "11.2px",
+      "padding": "6px 16px",
+      "color": "rgb(136, 136, 136)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "letterSpacing": "1.344px"
+    },
+    {
+      "text": "Preise",
+      "fontSize": "11.2px",
+      "padding": "6px 16px",
+      "color": "rgb(136, 136, 136)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "letterSpacing": "1.344px"
+    },
+    {
+      "text": "Tech-Stack",
+      "fontSize": "11.2px",
+      "padding": "6px 16px",
+      "color": "rgb(136, 136, 136)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "letterSpacing": "1.344px"
+    },
+    {
+      "text": "FAQ",
+      "fontSize": "11.2px",
+      "padding": "6px 16px",
+      "color": "rgb(136, 136, 136)",
+      "borderColor": "rgba(255, 255, 255, 0.1)",
+      "letterSpacing": "1.344px"
+    }
+  ],
+  "nav": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "20px 0px",
+    "position": "fixed"
+  },
+  "containers": [
+    {
+      "width": "1200px",
+      "maxWidth": "1200px",
+      "padding": "0px 48px"
+    },
+    {
+      "width": "1200px",
+      "maxWidth": "1200px",
+      "padding": "0px 48px"
+    },
+    {
+      "width": "1200px",
+      "maxWidth": "1200px",
+      "padding": "0px 48px"
+    },
+    {
+      "width": "1200px",
+      "maxWidth": "1200px",
+      "padding": "0px 48px"
+    },
+    {
+      "width": "1200px",
+      "maxWidth": "1200px",
+      "padding": "0px 48px"
+    }
+  ],
+  "uniqueBgColors": [
+    "rgb(12, 12, 12)",
+    "rgb(229, 229, 229)",
+    "rgb(255, 255, 255)",
+    "rgba(59, 130, 246, 0.15)",
+    "rgba(6, 182, 212, 0.1)",
+    "rgb(22, 163, 74)",
+    "rgb(22, 22, 22)",
+    "rgb(250, 250, 248)",
+    "rgba(0, 0, 0, 0.07)",
+    "rgba(59, 130, 246, 0.04)",
+    "rgb(238, 244, 255)",
+    "rgb(243, 232, 255)",
+    "rgb(236, 253, 245)",
+    "rgb(255, 247, 237)",
+    "rgb(236, 254, 255)",
+    "rgb(253, 242, 248)",
+    "rgb(17, 17, 17)",
+    "rgba(0, 0, 0, 0.05)"
+  ],
+  "uniqueTextColors": [
+    "rgb(0, 0, 0)",
+    "rgb(229, 229, 229)",
+    "rgb(136, 136, 136)",
+    "rgb(12, 12, 12)",
+    "rgb(255, 255, 255)",
+    "rgb(51, 51, 51)",
+    "rgb(85, 85, 85)",
+    "rgb(22, 163, 74)",
+    "rgb(124, 58, 237)",
+    "rgb(234, 88, 12)",
+    "rgb(17, 17, 17)",
+    "rgb(90, 90, 90)",
+    "rgb(220, 38, 38)",
+    "rgb(37, 99, 235)",
+    "rgb(5, 150, 105)",
+    "rgb(8, 145, 178)",
+    "rgb(219, 39, 119)"
+  ]
+}
