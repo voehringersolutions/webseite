@@ -416,4 +416,169 @@ document.addEventListener('DOMContentLoaded', () => {
         isDesktop = window.innerWidth > 1024;
     });
 
+    // ==========================================
+    // 16. CTA DITHERING SHADER (WebGL)
+    // ==========================================
+    const ctaCard = document.getElementById('cta-card');
+    const canvas = document.getElementById('cta-shader');
+    if (canvas && ctaCard) {
+        const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: false });
+        if (gl) {
+            let speed = 0.2;
+            let targetSpeed = 0.2;
+
+            ctaCard.addEventListener('mouseenter', () => { targetSpeed = 0.6; });
+            ctaCard.addEventListener('mouseleave', () => { targetSpeed = 0.2; });
+
+            const vsSource = `
+                attribute vec2 a_position;
+                varying vec2 v_uv;
+                void main() {
+                    v_uv = a_position * 0.5 + 0.5;
+                    gl_Position = vec4(a_position, 0.0, 1.0);
+                }
+            `;
+
+            const fsSource = `
+                precision mediump float;
+                varying vec2 v_uv;
+                uniform float u_time;
+                uniform vec2 u_resolution;
+                uniform float u_speed;
+
+                // Bayer 4x4 dither matrix
+                float bayer4(vec2 p) {
+                    vec2 i = floor(mod(p, 4.0));
+                    int idx = int(i.x) + int(i.y) * 4;
+                    float m[16];
+                    m[0]=0.0;  m[1]=8.0;  m[2]=2.0;  m[3]=10.0;
+                    m[4]=12.0; m[5]=4.0;  m[6]=14.0; m[7]=6.0;
+                    m[8]=3.0;  m[9]=11.0; m[10]=1.0; m[11]=9.0;
+                    m[12]=15.0;m[13]=7.0; m[14]=13.0;m[15]=5.0;
+                    for(int k=0; k<16; k++) {
+                        if(k==idx) return m[k] / 16.0;
+                    }
+                    return 0.0;
+                }
+
+                // Simplex-like noise
+                vec2 hash(vec2 p) {
+                    p = vec2(dot(p,vec2(127.1,311.7)), dot(p,vec2(269.5,183.3)));
+                    return -1.0 + 2.0 * fract(sin(p) * 43758.5453);
+                }
+
+                float noise(vec2 p) {
+                    vec2 i = floor(p);
+                    vec2 f = fract(p);
+                    vec2 u = f * f * (3.0 - 2.0 * f);
+                    return mix(
+                        mix(dot(hash(i), f), dot(hash(i + vec2(1.0, 0.0)), f - vec2(1.0, 0.0)), u.x),
+                        mix(dot(hash(i + vec2(0.0, 1.0)), f - vec2(0.0, 1.0)), dot(hash(i + vec2(1.0, 1.0)), f - vec2(1.0, 1.0)), u.x),
+                        u.y
+                    );
+                }
+
+                float fbm(vec2 p) {
+                    float v = 0.0;
+                    float a = 0.5;
+                    for(int i = 0; i < 5; i++) {
+                        v += a * noise(p);
+                        p *= 2.0;
+                        a *= 0.5;
+                    }
+                    return v;
+                }
+
+                void main() {
+                    vec2 uv = v_uv;
+                    float t = u_time * u_speed;
+
+                    // Warp distortion
+                    vec2 warp = vec2(
+                        fbm(uv * 3.0 + t * 0.3),
+                        fbm(uv * 3.0 + t * 0.2 + 5.0)
+                    );
+                    float f = fbm(uv * 2.0 + warp * 1.5 + t * 0.1);
+
+                    // Shape: fade from center
+                    vec2 center = uv - 0.5;
+                    float dist = length(center);
+                    float vignette = 1.0 - smoothstep(0.2, 0.7, dist);
+
+                    float intensity = (f * 0.5 + 0.5) * vignette;
+
+                    // Dithering
+                    vec2 pixel = gl_FragCoord.xy;
+                    float dither = bayer4(pixel);
+                    float dithered = step(dither, intensity * 0.85);
+
+                    // Brand color: blue #3b82f6
+                    vec3 color = vec3(0.231, 0.510, 0.965);
+                    // Mix with cyan #06b6d4
+                    vec3 color2 = vec3(0.024, 0.714, 0.831);
+                    vec3 finalColor = mix(color, color2, f * 0.5 + 0.5);
+
+                    gl_FragColor = vec4(finalColor, dithered * 0.35);
+                }
+            `;
+
+            function compileShader(type, source) {
+                const s = gl.createShader(type);
+                gl.shaderSource(s, source);
+                gl.compileShader(s);
+                return s;
+            }
+
+            const vs = compileShader(gl.VERTEX_SHADER, vsSource);
+            const fs = compileShader(gl.FRAGMENT_SHADER, fsSource);
+            const prog = gl.createProgram();
+            gl.attachShader(prog, vs);
+            gl.attachShader(prog, fs);
+            gl.linkProgram(prog);
+            gl.useProgram(prog);
+
+            const buf = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+
+            const aPos = gl.getAttribLocation(prog, 'a_position');
+            gl.enableVertexAttribArray(aPos);
+            gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+            const uTime = gl.getUniformLocation(prog, 'u_time');
+            const uRes = gl.getUniformLocation(prog, 'u_resolution');
+            const uSpeed = gl.getUniformLocation(prog, 'u_speed');
+
+            gl.enable(gl.BLEND);
+            gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+            function resize() {
+                const r = ctaCard.getBoundingClientRect();
+                const dpr = Math.min(window.devicePixelRatio, 2);
+                canvas.width = r.width * dpr;
+                canvas.height = r.height * dpr;
+                canvas.style.width = r.width + 'px';
+                canvas.style.height = r.height + 'px';
+                gl.viewport(0, 0, canvas.width, canvas.height);
+            }
+
+            resize();
+            window.addEventListener('resize', resize);
+
+            let startTime = performance.now();
+            function render() {
+                speed += (targetSpeed - speed) * 0.02;
+                const t = (performance.now() - startTime) / 1000;
+                gl.clearColor(0, 0, 0, 0);
+                gl.clear(gl.COLOR_BUFFER_BIT);
+                gl.uniform1f(uTime, t);
+                gl.uniform2f(uRes, canvas.width, canvas.height);
+                gl.uniform1f(uSpeed, speed);
+                gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+                requestAnimationFrame(render);
+            }
+            render();
+        }
+    }
+
 });
