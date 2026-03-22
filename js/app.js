@@ -344,7 +344,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 14. ANIMATED GRID PATTERN ON LIGHT SECTIONS
+    // 14. DASHBOARD CONTAINER SCROLL ANIMATION
+    // ==========================================
+    const dashboardFrame = document.querySelector('.dashboard-showcase__frame');
+    const dashboardContainer = document.querySelector('.dashboard-showcase');
+
+    if (dashboardFrame && dashboardContainer) {
+        function updateDashboardScroll() {
+            const rect = dashboardContainer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Calculate progress: 0 = element just entered viewport, 1 = element center at viewport center
+            const elementCenter = rect.top + rect.height / 2;
+            const viewportCenter = windowHeight / 2;
+
+            // Start animation when element enters viewport bottom, end when center reaches viewport center
+            const startPoint = windowHeight;
+            const endPoint = viewportCenter;
+            const progress = Math.max(0, Math.min(1, (startPoint - elementCenter) / (startPoint - endPoint)));
+
+            // Ease out cubic for smoother feel
+            const eased = 1 - Math.pow(1 - progress, 3);
+
+            const rotateX = 25 * (1 - eased); // 25deg → 0deg
+            const scale = 0.9 + 0.1 * eased;  // 0.9 → 1.0
+
+            dashboardFrame.style.transform = `rotateX(${rotateX}deg) scale(${scale})`;
+
+            if (eased > 0.95) {
+                dashboardFrame.classList.add('scroll-flat');
+            } else {
+                dashboardFrame.classList.remove('scroll-flat');
+            }
+        }
+
+        window.addEventListener('scroll', updateDashboardScroll, { passive: true });
+        updateDashboardScroll(); // Initial call
+    }
+
+    // ==========================================
+    // 15a. ANIMATED GRID PATTERN ON LIGHT SECTIONS
     // ==========================================
     document.querySelectorAll('.section--white, .section--light').forEach(section => {
         const grid = document.createElement('div');

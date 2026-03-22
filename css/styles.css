@@ -1422,6 +1422,7 @@ ul {
 .dashboard-showcase {
     max-width: 1000px;
     margin: 0 auto;
+    perspective: 1200px;
 }
 
 .dashboard-showcase__frame {
@@ -1430,6 +1431,14 @@ ul {
     border: 1px solid var(--color-border-light);
     background: var(--color-surface);
     box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+    transform: rotateX(25deg) scale(0.9);
+    transform-origin: center top;
+    transition: box-shadow 0.4s ease;
+    will-change: transform;
+}
+
+.dashboard-showcase__frame.scroll-flat {
+    box-shadow: 0 60px 120px rgba(0, 0, 0, 0.6);
 }
 
 .dashboard-showcase__toolbar {

@@ -1,6 +1,8 @@
 node_modules/
 # Screenshot-Dateien im Root ignorieren
 /*.png
+# Temporäre Playwright Scripts
+*.mjs
 # Assets behalten
 !assets/
 .env
