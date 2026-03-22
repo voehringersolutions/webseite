@@ -60,6 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
     handleNavScroll();
 
     // ==========================================
+    // 2b. LIVE TIMEZONE CLOCKS
+    // ==========================================
+    function updateTimezones() {
+        const now = new Date();
+        const fmt = (tz) => now.toLocaleTimeString('de-DE', { timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false });
+        const de = document.querySelector('#tz-germany .timezone-display__time');
+        const us = document.querySelector('#tz-usa .timezone-display__time');
+        const ae = document.querySelector('#tz-uae .timezone-display__time');
+        if (de) de.textContent = fmt('Europe/Berlin');
+        if (us) us.textContent = fmt('America/New_York');
+        if (ae) ae.textContent = fmt('Asia/Dubai');
+    }
+    updateTimezones();
+    setInterval(updateTimezones, 30000);
+
+    // ==========================================
     // 3. MOBILE MENU TOGGLE
     // ==========================================
     const navToggle = document.getElementById('navToggle');

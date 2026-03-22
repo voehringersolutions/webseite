@@ -119,6 +119,37 @@
                 </div>
             </div>
         </div>
+        <!-- Rotating Badge -->
+        <div class="rotating-badge">
+            <svg viewBox="0 0 200 200" class="rotating-badge__svg">
+                <defs>
+                    <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"/>
+                </defs>
+                <text class="rotating-badge__text">
+                    <textPath href="#circlePath">CRM AUTOMATION • BUILD &amp; SCALE • CRM AUTOMATION • BUILD &amp; SCALE •</textPath>
+                </text>
+            </svg>
+            <div class="rotating-badge__icon">
+                <img src="assets/logo-square.png" alt="VS" class="rotating-badge__logo">
+            </div>
+        </div>
+
+        <!-- Timezone Display -->
+        <div class="timezone-display">
+            <div class="timezone-display__item" id="tz-germany">
+                <span class="timezone-display__time"></span>
+                <span class="timezone-display__label">• GERMANY</span>
+            </div>
+            <div class="timezone-display__item" id="tz-usa">
+                <span class="timezone-display__time"></span>
+                <span class="timezone-display__label">• USA (ET)</span>
+            </div>
+            <div class="timezone-display__item" id="tz-uae">
+                <span class="timezone-display__time"></span>
+                <span class="timezone-display__label">• UAE</span>
+            </div>
+        </div>
+
         <div class="hero__scroll-indicator">
             <div class="hero__scroll-line"></div>
         </div>
