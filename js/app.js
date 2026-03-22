@@ -417,15 +417,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 16. CTA DITHERING SHADER (WebGL)
+    // 16. CTA DITHERING SHADER (WebGL) — Performance optimized
     // ==========================================
     const ctaCard = document.getElementById('cta-card');
     const canvas = document.getElementById('cta-shader');
     if (canvas && ctaCard) {
-        const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: false });
+        const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: false, antialias: false, powerPreference: 'low-power' });
         if (gl) {
             let speed = 0.2;
             let targetSpeed = 0.2;
+            let isVisible = false;
+            let animId = null;
 
             ctaCard.addEventListener('mouseenter', () => { targetSpeed = 0.6; });
             ctaCard.addEventListener('mouseleave', () => { targetSpeed = 0.2; });
@@ -439,14 +441,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             `;
 
+            // Optimized: 3 octaves instead of 5, single warp layer
             const fsSource = `
                 precision mediump float;
                 varying vec2 v_uv;
                 uniform float u_time;
-                uniform vec2 u_resolution;
                 uniform float u_speed;
 
-                // Bayer 4x4 dither matrix
                 float bayer4(vec2 p) {
                     vec2 i = floor(mod(p, 4.0));
                     int idx = int(i.x) + int(i.y) * 4;
@@ -461,7 +462,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     return 0.0;
                 }
 
-                // Simplex-like noise
                 vec2 hash(vec2 p) {
                     p = vec2(dot(p,vec2(127.1,311.7)), dot(p,vec2(269.5,183.3)));
                     return -1.0 + 2.0 * fract(sin(p) * 43758.5453);
@@ -480,12 +480,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 float fbm(vec2 p) {
                     float v = 0.0;
-                    float a = 0.5;
-                    for(int i = 0; i < 5; i++) {
-                        v += a * noise(p);
-                        p *= 2.0;
-                        a *= 0.5;
-                    }
+                    v += 0.5 * noise(p); p *= 2.0;
+                    v += 0.25 * noise(p); p *= 2.0;
+                    v += 0.125 * noise(p);
                     return v;
                 }
 
@@ -493,35 +490,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     vec2 uv = v_uv;
                     float t = u_time * u_speed;
 
-                    // Strong warp distortion — flowing organic shapes
                     vec2 warp = vec2(
-                        fbm(uv * 2.5 + t * 0.4),
-                        fbm(uv * 2.5 + t * 0.3 + 5.0)
+                        fbm(uv * 2.5 + t * 0.3),
+                        fbm(uv * 2.5 + t * 0.2 + 5.0)
                     );
-                    vec2 warp2 = vec2(
-                        fbm(uv * 3.0 + warp * 2.0 + t * 0.15),
-                        fbm(uv * 3.0 + warp * 2.0 + t * 0.1 + 3.0)
-                    );
-                    float f = fbm(uv * 1.5 + warp2 * 2.5 + t * 0.08);
+                    float f = fbm(uv * 2.0 + warp * 2.0 + t * 0.1);
 
-                    // Full coverage — soft edge fade only at card borders
-                    vec2 edge = smoothstep(0.0, 0.08, uv) * smoothstep(0.0, 0.08, 1.0 - uv);
-                    float mask = edge.x * edge.y;
+                    vec2 edge = smoothstep(0.0, 0.06, uv) * smoothstep(0.0, 0.06, 1.0 - uv);
+                    float intensity = (f * 0.5 + 0.5) * edge.x * edge.y;
 
-                    float intensity = (f * 0.5 + 0.5) * mask;
-
-                    // Large pixel dithering — scale down coords for bigger dots
                     vec2 pixel = floor(gl_FragCoord.xy / 3.0);
-                    float dither = bayer4(pixel);
-                    float dithered = step(dither, intensity);
+                    float dithered = step(bayer4(pixel), intensity);
 
-                    // Brand color: blue #3b82f6
-                    vec3 color = vec3(0.231, 0.510, 0.965);
-                    // Mix with cyan #06b6d4
-                    vec3 color2 = vec3(0.024, 0.714, 0.831);
-                    vec3 finalColor = mix(color, color2, f * 0.6 + 0.4);
-
-                    gl_FragColor = vec4(finalColor, dithered * 0.5);
+                    vec3 col = mix(vec3(0.231, 0.510, 0.965), vec3(0.024, 0.714, 0.831), f * 0.5 + 0.5);
+                    gl_FragColor = vec4(col, dithered * 0.45);
                 }
             `;
 
@@ -543,13 +525,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const buf = gl.createBuffer();
             gl.bindBuffer(gl.ARRAY_BUFFER, buf);
             gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
-
             const aPos = gl.getAttribLocation(prog, 'a_position');
             gl.enableVertexAttribArray(aPos);
             gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
 
             const uTime = gl.getUniformLocation(prog, 'u_time');
-            const uRes = gl.getUniformLocation(prog, 'u_resolution');
             const uSpeed = gl.getUniformLocation(prog, 'u_speed');
 
             gl.enable(gl.BLEND);
@@ -557,30 +537,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
             function resize() {
                 const r = ctaCard.getBoundingClientRect();
-                const dpr = Math.min(window.devicePixelRatio, 2);
-                canvas.width = r.width * dpr;
-                canvas.height = r.height * dpr;
+                // Half resolution for performance
+                canvas.width = Math.floor(r.width * 0.5);
+                canvas.height = Math.floor(r.height * 0.5);
                 canvas.style.width = r.width + 'px';
                 canvas.style.height = r.height + 'px';
                 gl.viewport(0, 0, canvas.width, canvas.height);
             }
-
             resize();
             window.addEventListener('resize', resize);
 
+            // Only render when CTA is in viewport
+            const observer = new IntersectionObserver(entries => {
+                isVisible = entries[0].isIntersecting;
+                if (isVisible && !animId) render();
+            }, { threshold: 0.1 });
+            observer.observe(ctaCard);
+
             let startTime = performance.now();
             function render() {
+                if (!isVisible) { animId = null; return; }
                 speed += (targetSpeed - speed) * 0.02;
                 const t = (performance.now() - startTime) / 1000;
                 gl.clearColor(0, 0, 0, 0);
                 gl.clear(gl.COLOR_BUFFER_BIT);
                 gl.uniform1f(uTime, t);
-                gl.uniform2f(uRes, canvas.width, canvas.height);
                 gl.uniform1f(uSpeed, speed);
                 gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-                requestAnimationFrame(render);
+                animId = requestAnimationFrame(render);
             }
-            render();
         }
     }
 
