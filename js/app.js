@@ -383,7 +383,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 15a. ANIMATED GRID PATTERN ON LIGHT SECTIONS
+    // 15a. TYPEWRITER SCROLL-STATEMENT BREAKERS
+    // ==========================================
+    const typewriterElements = document.querySelectorAll('[data-typewriter]');
+
+    typewriterElements.forEach(el => {
+        const text = el.textContent;
+        el.textContent = '';
+        const chars = [];
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            span.className = 'typewriter-char';
+            if (text[i] === ' ') {
+                span.innerHTML = '&nbsp;';
+                span.classList.add('is-space');
+            } else {
+                span.textContent = text[i];
+            }
+            el.appendChild(span);
+            chars.push(span);
+        }
+
+        const typewriterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    chars.forEach((char, index) => {
+                        setTimeout(() => {
+                            char.classList.add('visible');
+                        }, index * 50);
+                    });
+                    typewriterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        typewriterObserver.observe(el);
+    });
+
+    // ==========================================
+    // 15b. ANIMATED GRID PATTERN ON LIGHT SECTIONS
     // ==========================================
     document.querySelectorAll('.section--white, .section--light').forEach(section => {
         const grid = document.createElement('div');

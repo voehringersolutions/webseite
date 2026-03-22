@@ -203,41 +203,43 @@
                 <h2 class="section__title reveal">Dein Team verkauft nicht.<br>Es <span class="text-accent text-gradient">verwaltet.</span></h2>
                 <p class="section__subtitle reveal">Vertriebsteams verbringen mehr Zeit mit CRM-Pflege als mit Verkaufen. Das kostet nicht nur Zeit — es kostet Deals.</p>
             </div>
-            <div class="problem-grid">
-                <div class="problem-card reveal tilt-card">
-                    <div class="problem-card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="comparison">
+                <div class="comparison__side comparison__side--without reveal">
+                    <div class="comparison__header">
+                        <span class="comparison__icon comparison__icon--red">&#10005;</span>
+                        <h3>Ohne Automation</h3>
                     </div>
-                    <div class="problem-card__number">15–20 Min.</div>
-                    <h3 class="problem-card__title">Manuelle Arbeit pro Lead</h3>
-                    <p class="problem-card__text">Status updaten, Tasks anlegen, E-Mails schreiben — für jeden einzelnen Kontakt. Jeden Tag.</p>
+                    <ul class="comparison__list">
+                        <li><span class="comparison__bullet comparison__bullet--red"></span>15–20 Min. manuelle Arbeit pro Lead</li>
+                        <li><span class="comparison__bullet comparison__bullet--red"></span>20–30% vergessene Follow-Ups</li>
+                        <li><span class="comparison__bullet comparison__bullet--red"></span>Kein Pipeline-Überblick</li>
+                        <li><span class="comparison__bullet comparison__bullet--red"></span>Daten-Wildwuchs im CRM</li>
+                        <li><span class="comparison__bullet comparison__bullet--red"></span>Entscheidungen nach Bauchgefühl</li>
+                    </ul>
                 </div>
-                <div class="problem-card reveal tilt-card">
-                    <div class="problem-card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                    </div>
-                    <div class="problem-card__number">20–30%</div>
-                    <h3 class="problem-card__title">Vergessene Follow-Ups</h3>
-                    <p class="problem-card__text">Leads fallen durchs Raster, weil niemand den Überblick behält. Verlorene Deals, die nie hätten verloren gehen müssen.</p>
+                <div class="comparison__divider">
+                    <div class="comparison__vs">VS</div>
                 </div>
-                <div class="problem-card reveal tilt-card">
-                    <div class="problem-card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <div class="comparison__side comparison__side--with reveal">
+                    <div class="comparison__header">
+                        <span class="comparison__icon comparison__icon--green">&#10003;</span>
+                        <h3>Mit VöhringerSolutions</h3>
                     </div>
-                    <div class="problem-card__number">0%</div>
-                    <h3 class="problem-card__title">Pipeline-Überblick</h3>
-                    <p class="problem-card__text">Wo steht welcher Deal? Wer muss wann angerufen werden? Keiner weiß es genau — Entscheidungen basieren auf Bauchgefühl.</p>
-                </div>
-                <div class="problem-card reveal tilt-card">
-                    <div class="problem-card__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
-                    </div>
-                    <div class="problem-card__number">Chaos</div>
-                    <h3 class="problem-card__title">Daten-Wildwuchs im CRM</h3>
-                    <p class="problem-card__text">Unvollständige Einträge, fehlende Notizen, inkonsistente Status — keine verlässliche Basis für datenbasierte Entscheidungen.</p>
+                    <ul class="comparison__list">
+                        <li><span class="comparison__bullet comparison__bullet--green"></span>2–3 Min. — ein Formular, fertig</li>
+                        <li><span class="comparison__bullet comparison__bullet--green"></span>0% vergessene Follow-Ups</li>
+                        <li><span class="comparison__bullet comparison__bullet--green"></span>Echtzeit Pipeline-Dashboard</li>
+                        <li><span class="comparison__bullet comparison__bullet--green"></span>Saubere, strukturierte Daten</li>
+                        <li><span class="comparison__bullet comparison__bullet--green"></span>Datenbasierte Entscheidungen</li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Scroll Statement: Between Problem and Leistungen -->
+    <section class="scroll-statement">
+        <div class="scroll-statement__text" data-typewriter>Es geht auch anders.</div>
     </section>
 
     <!-- Solution Section -->
@@ -255,6 +257,7 @@
                     </div>
                     <h3 class="solution-card__title">Automatische Status-Updates</h3>
                     <p class="solution-card__text">Basierend auf Gesprächsergebnissen aktualisiert sich dein CRM von selbst. Kein manuelles Umstellen, keine vergessenen Einträge.</p>
+                    <img src="assets/dashboard-pipeline.png" class="solution-card__preview" alt="Dashboard Preview" loading="lazy">
                 </div>
                 <div class="solution-card reveal tilt-card">
                     <div class="solution-card__icon">
@@ -417,6 +420,11 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Scroll Statement: Between Ergebnisse and Dashboard -->
+    <section class="scroll-statement">
+        <div class="scroll-statement__text" data-typewriter>In 14 Tagen. Nicht in 14 Monaten.</div>
     </section>
 
     <!-- Dashboard Showcase -->
@@ -843,8 +851,31 @@
                         <p>Neben unseren Gebühren zahlst du die Close CRM Lizenz (€109/User/Monat) und bei CRM Complete optional SMS-Kosten (ca. €30–50/Monat). Tools wie Notion und Stripe sind in der Regel kostenlos nutzbar.</p>
                     </div>
                 </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        <span>Brauche ich technisches Know-how?</span>
+                        <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Nein. Wir übernehmen das komplette technische Setup. Dein Team braucht nur ein kurzes Formular nach jedem Gespräch auszufüllen — das war's.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__question">
+                        <span>Funktioniert das auch für kleine Teams?</span>
+                        <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Ja, unsere Systeme sind ab 2 Vertriebsmitarbeitern sinnvoll. Gerade kleine Teams profitieren überproportional, weil jeder vergessene Lead prozentual stärker ins Gewicht fällt.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- Scroll Statement: Before CTA -->
+    <section class="scroll-statement">
+        <div class="scroll-statement__text" data-typewriter>Bereit?</div>
     </section>
 
     <!-- CTA Section -->
