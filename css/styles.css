@@ -1833,6 +1833,23 @@ ul {
     font-weight: 400;
 }
 
+.pricing-card__price--blurred {
+    filter: blur(8px);
+    user-select: none;
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.pricing-card__price-cta {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-primary-light);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
 .pricing-card__features {
     display: flex;
     flex-direction: column;

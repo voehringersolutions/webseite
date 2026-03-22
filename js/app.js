@@ -366,10 +366,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Ease out cubic for smoother feel
             const eased = 1 - Math.pow(1 - progress, 3);
 
-            const rotateX = 25 * (1 - eased); // 25deg → 0deg
-            const scale = 0.9 + 0.1 * eased;  // 0.9 → 1.0
+            const rotateX = 35 * (1 - eased); // 35deg → 0deg
+            const scale = 0.75 + 0.25 * eased;  // 0.75 → 1.0
+            const translateY = 40 * (1 - eased); // 40px → 0px
 
-            dashboardFrame.style.transform = `rotateX(${rotateX}deg) scale(${scale})`;
+            dashboardFrame.style.transform = `perspective(1200px) rotateX(${rotateX}deg) scale(${scale}) translateY(${translateY}px)`;
 
             if (eased > 0.95) {
                 dashboardFrame.classList.add('scroll-flat');
