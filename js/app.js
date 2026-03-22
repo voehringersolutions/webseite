@@ -421,7 +421,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const ctaCard = document.getElementById('cta-card');
     const canvas = document.getElementById('cta-shader');
-    if (canvas && ctaCard) {
+    const isMobile = window.innerWidth < 1024 || /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+    if (canvas && ctaCard && !isMobile) {
         const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: false, antialias: false, powerPreference: 'low-power' });
         if (gl) {
             let speed = 0.2;
