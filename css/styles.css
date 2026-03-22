@@ -912,7 +912,7 @@ ul {
 @media (max-width: 768px) {
     .rotating-badge,
     .timezone-display {
-        display: none;
+        display: none !important;
     }
 }
 
