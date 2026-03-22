@@ -71,6 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (de) de.textContent = fmt('Europe/Berlin');
         if (us) us.textContent = fmt('America/New_York');
         if (ae) ae.textContent = fmt('Asia/Dubai');
+        // Mobile timezone clocks
+        const mDe = document.getElementById('tz-m-de');
+        const mUs = document.getElementById('tz-m-us');
+        const mAe = document.getElementById('tz-m-ae');
+        if (mDe) mDe.textContent = fmt('Europe/Berlin');
+        if (mUs) mUs.textContent = fmt('America/New_York');
+        if (mAe) mAe.textContent = fmt('Asia/Dubai');
     }
     updateTimezones();
     setInterval(updateTimezones, 30000);
