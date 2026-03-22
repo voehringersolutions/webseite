@@ -568,44 +568,35 @@ ul {
     -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 70%);
 }
 
-/* Hero Card — LemonAds-inspired glow card */
-.hero__card {
-    position: relative;
-    margin: 100px 40px 0;
-    border-radius: 32px;
-    border: 1px solid rgba(59, 130, 246, 0.25);
-    overflow: hidden;
-    min-height: calc(100vh - 120px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero__card-glow {
+.hero__orb {
     position: absolute;
-    inset: -100px;
-    background:
-        radial-gradient(ellipse 80% 70% at 50% 55%, rgba(59, 130, 246, 0.45) 0%, transparent 55%),
-        radial-gradient(ellipse 60% 55% at 65% 45%, rgba(6, 182, 212, 0.30) 0%, transparent 50%),
-        radial-gradient(ellipse 50% 50% at 35% 55%, rgba(99, 102, 241, 0.25) 0%, transparent 50%);
-    animation: heroGlow 12s ease-in-out infinite;
-    z-index: 0;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
 }
 
-.hero__card-noise {
-    position: absolute;
-    inset: 0;
-    opacity: 0.3;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-    background-size: 128px 128px;
-    z-index: 0;
-    pointer-events: none;
-    mix-blend-mode: overlay;
+.hero__orb--1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(59, 130, 246, 0.15);
+    top: -100px;
+    right: -100px;
+    animation: orbFloat 15s ease-in-out infinite;
 }
 
-@keyframes heroGlow {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.05); }
+.hero__orb--2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(6, 182, 212, 0.1);
+    bottom: -100px;
+    left: -100px;
+    animation: orbFloat 20s ease-in-out infinite reverse;
+}
+
+@keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -30px) scale(1.05); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
 }
 
 .hero__container {
@@ -617,7 +608,7 @@ ul {
     gap: 40px;
     align-items: center;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .hero__badge {
@@ -827,7 +818,7 @@ ul {
     right: 60px;
     width: 140px;
     height: 140px;
-    z-index: 5;
+    z-index: 2;
 }
 
 .rotating-badge__svg {
@@ -875,7 +866,7 @@ ul {
     position: absolute;
     bottom: 120px;
     left: 60px;
-    z-index: 5;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -1004,7 +995,7 @@ ul {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 5;
+    z-index: 2;
 }
 
 .hero__scroll-line {
@@ -2002,11 +1993,42 @@ ul {
     overflow: hidden;
 }
 
-.cta-section::before {
-    content: '';
+/* CTA Card — LemonAds-inspired glow card */
+.cta-card {
+    position: relative;
+    border-radius: 32px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    overflow: hidden;
+    padding: 80px 60px;
+    background: rgba(10, 12, 20, 0.6);
+}
+
+.cta-card__glow {
+    position: absolute;
+    inset: -150px;
+    background:
+        radial-gradient(ellipse 80% 70% at 50% 55%, rgba(59, 130, 246, 0.35) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 55% at 65% 40%, rgba(6, 182, 212, 0.22) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 50% at 35% 60%, rgba(99, 102, 241, 0.18) 0%, transparent 50%);
+    animation: ctaGlow 12s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cta-card__noise {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(59, 130, 246, 0.08), transparent);
+    opacity: 0.2;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    background-size: 128px 128px;
+    z-index: 0;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+@keyframes ctaGlow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.65; transform: scale(1.05); }
 }
 
 .cta-content {
@@ -2293,8 +2315,8 @@ ul {
         font-size: clamp(2.2rem, 8vw, 3.5rem);
     }
 
-    .hero__card {
-        margin: 80px 12px 0;
+    .cta-card {
+        padding: 48px 20px;
         border-radius: 20px;
     }
 }
