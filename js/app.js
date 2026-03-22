@@ -493,32 +493,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     vec2 uv = v_uv;
                     float t = u_time * u_speed;
 
-                    // Warp distortion
+                    // Strong warp distortion — flowing organic shapes
                     vec2 warp = vec2(
-                        fbm(uv * 3.0 + t * 0.3),
-                        fbm(uv * 3.0 + t * 0.2 + 5.0)
+                        fbm(uv * 2.5 + t * 0.4),
+                        fbm(uv * 2.5 + t * 0.3 + 5.0)
                     );
-                    float f = fbm(uv * 2.0 + warp * 1.5 + t * 0.1);
+                    vec2 warp2 = vec2(
+                        fbm(uv * 3.0 + warp * 2.0 + t * 0.15),
+                        fbm(uv * 3.0 + warp * 2.0 + t * 0.1 + 3.0)
+                    );
+                    float f = fbm(uv * 1.5 + warp2 * 2.5 + t * 0.08);
 
-                    // Shape: fade from center
-                    vec2 center = uv - 0.5;
-                    float dist = length(center);
-                    float vignette = 1.0 - smoothstep(0.2, 0.7, dist);
+                    // Full coverage — soft edge fade only at card borders
+                    vec2 edge = smoothstep(0.0, 0.08, uv) * smoothstep(0.0, 0.08, 1.0 - uv);
+                    float mask = edge.x * edge.y;
 
-                    float intensity = (f * 0.5 + 0.5) * vignette;
+                    float intensity = (f * 0.5 + 0.5) * mask;
 
-                    // Dithering
-                    vec2 pixel = gl_FragCoord.xy;
+                    // Large pixel dithering — scale down coords for bigger dots
+                    vec2 pixel = floor(gl_FragCoord.xy / 3.0);
                     float dither = bayer4(pixel);
-                    float dithered = step(dither, intensity * 0.85);
+                    float dithered = step(dither, intensity);
 
                     // Brand color: blue #3b82f6
                     vec3 color = vec3(0.231, 0.510, 0.965);
                     // Mix with cyan #06b6d4
                     vec3 color2 = vec3(0.024, 0.714, 0.831);
-                    vec3 finalColor = mix(color, color2, f * 0.5 + 0.5);
+                    vec3 finalColor = mix(color, color2, f * 0.6 + 0.4);
 
-                    gl_FragColor = vec4(finalColor, dithered * 0.35);
+                    gl_FragColor = vec4(finalColor, dithered * 0.5);
                 }
             `;
 
