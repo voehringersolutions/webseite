@@ -471,10 +471,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const heroHeight = heroEl.offsetHeight;
         // Start blur after 50px, fully blurred at 60% of hero height
         const scrollY = window.scrollY;
-        const progress = Math.max(0, Math.min(1, (scrollY - 50) / (heroHeight * 0.5)));
+        const progress = Math.max(0, Math.min(1, (scrollY - 30) / (heroHeight * 0.7)));
 
-        const blurAmount = progress * 18; // max 18px blur
-        const opacity = 1 - progress * 0.6; // fade to 0.4 opacity
+        const blurAmount = progress * 32; // max 32px blur
+        const opacity = 1 - progress * 0.85; // fade to 0.15 opacity
 
         const blurStyle = `blur(${blurAmount}px)`;
         const targets = [heroContainer, heroBg, rotatingBadge, scrollIndicator];
