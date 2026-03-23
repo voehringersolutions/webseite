@@ -72,20 +72,13 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
                     </a>
                 </div>
-                <!-- Mobile-only: Badge + Timezone inline -->
-                <div class="hero__mobile-extras">
-                    <div class="timezone-display-mobile">
-                        <div class="tz-item"><span class="tz-time" id="tz-m-de"></span><span class="tz-label">DE</span></div>
-                        <div class="tz-item"><span class="tz-time" id="tz-m-us"></span><span class="tz-label">US</span></div>
-                        <div class="tz-item"><span class="tz-time" id="tz-m-ae"></span><span class="tz-label">UAE</span></div>
-                    </div>
-                    <div class="rotating-badge-mobile">
-                        <svg viewBox="0 0 200 200">
-                            <defs><path id="circlePathMobile" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"/></defs>
-                            <text><textPath href="#circlePathMobile">CRM AUTOMATION • BUILD &amp; SCALE • CRM AUTOMATION • BUILD &amp; SCALE •</textPath></text>
-                        </svg>
-                        <div class="badge-icon"><img src="assets/logo-square.png" alt="VS"></div>
-                    </div>
+                <!-- Timezone inline (all screen sizes) -->
+                <div class="hero__timezone-bar reveal">
+                    <div class="tz-bar-item"><span class="tz-bar-time" id="tz-de"></span><span class="tz-bar-label">DE</span></div>
+                    <span class="tz-bar-sep">·</span>
+                    <div class="tz-bar-item"><span class="tz-bar-time" id="tz-us"></span><span class="tz-bar-label">US</span></div>
+                    <span class="tz-bar-sep">·</span>
+                    <div class="tz-bar-item"><span class="tz-bar-time" id="tz-ae"></span><span class="tz-bar-label">UAE</span></div>
                 </div>
             </div>
             <div class="hero__visual">
@@ -149,23 +142,7 @@
             </div>
         </div>
 
-        <!-- Timezone Display -->
-        <div class="timezone-display">
-            <div class="timezone-display__item" id="tz-germany">
-                <span class="timezone-display__time"></span>
-                <span class="timezone-display__label">• GERMANY</span>
-            </div>
-            <div class="timezone-display__item" id="tz-usa">
-                <span class="timezone-display__time"></span>
-                <span class="timezone-display__label">• USA (ET)</span>
-            </div>
-            <div class="timezone-display__item" id="tz-uae">
-                <span class="timezone-display__time"></span>
-                <span class="timezone-display__label">• UAE</span>
-            </div>
-        </div>
-
-        <div class="hero__scroll-indicator">
+<div class="hero__scroll-indicator">
             <div class="hero__scroll-line"></div>
         </div>
     </section>
