@@ -1,0 +1,19 @@
+{
+  "name": "voehringer-web",
+  "description": "Agent-Team für Website-Entwicklung, Branding-Design-System, Testing und Optimierung für VöhringerSolutions",
+  "createdAt": 1774117946023,
+  "leadAgentId": "team-lead@voehringer-web",
+  "leadSessionId": "4960489b-6b0c-460c-99a0-0dfb4ba63045",
+  "members": [
+    {
+      "agentId": "team-lead@voehringer-web",
+      "name": "team-lead",
+      "agentType": "team-lead",
+      "model": "claude-opus-4-6[1m]",
+      "joinedAt": 1774117946023,
+      "tmuxPaneId": "",
+      "cwd": "c:\\Users\\voehr",
+      "subscriptions": []
+    }
+  ]
+}
