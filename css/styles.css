@@ -898,14 +898,17 @@ ul {
     .rotating-badge {
         width: 110px;
         height: 110px;
-        bottom: 280px;
+        bottom: 40px;
         right: 30px;
     }
     .rotating-badge__text { font-size: 10px; }
     .rotating-badge__icon { width: 36px; height: 36px; }
     .timezone-display {
-        bottom: 290px;
+        bottom: 50px;
         left: 30px;
+    }
+    .hero__actions {
+        margin-bottom: 160px;
     }
 }
 
