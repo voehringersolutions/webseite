@@ -545,10 +545,10 @@ ul {
 .hero {
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 140px;
 }
 
 .hero__bg {
@@ -863,9 +863,7 @@ ul {
 
 /* Timezone Display */
 .timezone-display {
-    position: absolute;
-    bottom: 120px;
-    left: 60px;
+    margin-top: 40px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -904,11 +902,7 @@ ul {
     .rotating-badge__text { font-size: 10px; }
     .rotating-badge__icon { width: 36px; height: 36px; }
     .timezone-display {
-        bottom: 50px;
-        left: 30px;
-    }
-    .hero__actions {
-        margin-bottom: 160px;
+        margin-top: 32px;
     }
 }
 
@@ -2466,6 +2460,10 @@ ul {
 
     .hero__actions {
         justify-content: center;
+    }
+
+    .timezone-display {
+        align-items: center;
     }
 
     .hero__visual {
