@@ -563,8 +563,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     vec2 pixel = floor(gl_FragCoord.xy / 3.0);
                     float dithered = step(bayer4(pixel), intensity);
 
-                    vec3 col = mix(vec3(0.231, 0.510, 0.965), vec3(0.024, 0.714, 0.831), f * 0.5 + 0.5);
-                    gl_FragColor = vec4(col, dithered * 0.45);
+                    vec3 col = mix(vec3(0.10, 0.25, 0.50), vec3(0.01, 0.35, 0.45), f * 0.5 + 0.5);
+                    gl_FragColor = vec4(col, dithered * 0.30);
                 }
             `;
 
