@@ -2608,15 +2608,6 @@ ul {
    Scroll Blur Effect
    ============================================ */
 
-/* Hero blurs out as user scrolls down */
-.hero__container,
-.hero__bg,
-.rotating-badge,
-.hero__scroll-indicator {
-    transition: filter 0.1s linear, opacity 0.1s linear;
-    will-change: filter, opacity;
-}
-
 /* Sections blur-in as they enter the viewport */
 .scroll-blur-in {
     filter: blur(20px);

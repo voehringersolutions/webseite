@@ -456,40 +456,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 17. SCROLL BLUR EFFECT
+    // 17. SCROLL BLUR EFFECT — Section blur-in
     // ==========================================
-
-    // 17a. Hero blur-out on scroll
-    const heroContainer = document.querySelector('.hero__container');
-    const heroBg = document.querySelector('.hero__bg');
-    const rotatingBadge = document.querySelector('.rotating-badge');
-    const scrollIndicator = document.querySelector('.hero__scroll-indicator');
-    const heroEl = document.getElementById('hero');
-
-    function updateHeroBlur() {
-        if (!heroEl) return;
-        const heroHeight = heroEl.offsetHeight;
-        // Start blur after 50px, fully blurred at 60% of hero height
-        const scrollY = window.scrollY;
-        const progress = Math.max(0, Math.min(1, (scrollY - 30) / (heroHeight * 0.7)));
-
-        const blurAmount = progress * 32; // max 32px blur
-        const opacity = 1 - progress * 0.85; // fade to 0.15 opacity
-
-        const blurStyle = `blur(${blurAmount}px)`;
-        const targets = [heroContainer, heroBg, rotatingBadge, scrollIndicator];
-        targets.forEach(el => {
-            if (el) {
-                el.style.filter = blurStyle;
-                el.style.opacity = opacity;
-            }
-        });
-    }
-
-    window.addEventListener('scroll', updateHeroBlur, { passive: true });
-    updateHeroBlur();
-
-    // 17b. Section content blur-in on scroll
     document.querySelectorAll('.section > .container, .section > .section__header, .trust-bar__container, .dashboard-showcase__container').forEach(el => {
         el.classList.add('scroll-blur-in');
     });
