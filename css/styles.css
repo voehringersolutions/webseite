@@ -2603,3 +2603,29 @@ ul {
         padding: 24px;
     }
 }
+
+/* ============================================
+   Scroll Blur Effect
+   ============================================ */
+
+/* Hero blurs out as user scrolls down */
+.hero__container,
+.hero__bg,
+.rotating-badge,
+.hero__scroll-indicator {
+    transition: filter 0.1s linear, opacity 0.1s linear;
+    will-change: filter, opacity;
+}
+
+/* Sections blur-in as they enter the viewport */
+.scroll-blur-in {
+    filter: blur(12px);
+    opacity: 0;
+    transition: filter 0.8s var(--ease-out), opacity 0.8s var(--ease-out);
+    will-change: filter, opacity;
+}
+
+.scroll-blur-in.in-view {
+    filter: blur(0px);
+    opacity: 1;
+}

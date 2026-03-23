@@ -456,6 +456,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
+    // 17. SCROLL BLUR EFFECT
+    // ==========================================
+
+    // 17a. Hero blur-out on scroll
+    const heroContainer = document.querySelector('.hero__container');
+    const heroBg = document.querySelector('.hero__bg');
+    const rotatingBadge = document.querySelector('.rotating-badge');
+    const scrollIndicator = document.querySelector('.hero__scroll-indicator');
+    const heroEl = document.getElementById('hero');
+
+    function updateHeroBlur() {
+        if (!heroEl) return;
+        const heroHeight = heroEl.offsetHeight;
+        // Start blur after 50px, fully blurred at 60% of hero height
+        const scrollY = window.scrollY;
+        const progress = Math.max(0, Math.min(1, (scrollY - 50) / (heroHeight * 0.5)));
+
+        const blurAmount = progress * 18; // max 18px blur
+        const opacity = 1 - progress * 0.6; // fade to 0.4 opacity
+
+        const blurStyle = `blur(${blurAmount}px)`;
+        const targets = [heroContainer, heroBg, rotatingBadge, scrollIndicator];
+        targets.forEach(el => {
+            if (el) {
+                el.style.filter = blurStyle;
+                el.style.opacity = opacity;
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateHeroBlur, { passive: true });
+    updateHeroBlur();
+
+    // 17b. Section content blur-in on scroll
+    document.querySelectorAll('.section > .container, .section > .section__header, .trust-bar__container, .dashboard-showcase__container').forEach(el => {
+        el.classList.add('scroll-blur-in');
+    });
+
+    const blurObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                blurObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -60px 0px'
+    });
+
+    document.querySelectorAll('.scroll-blur-in').forEach(el => blurObserver.observe(el));
+
+    // ==========================================
     // 16. CTA DITHERING SHADER (WebGL) — Performance optimized
     // ==========================================
     const ctaCard = document.getElementById('cta-card');
